@@ -540,48 +540,57 @@
       </div>
 
       <div class="col-lg-7">
-        <form action="https://formsubmit.co/kasayedesu19@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-          <!-- Add this to prevent spam -->
-          <input type="hidden" name="_captcha" value="false">
-          <!-- Add this for custom subject -->
-          <input type="hidden" name="_subject" value="New contact from Desu Portfolio!">
-          <!-- Add this to redirect after submission -->
-          <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
-          <!-- Add this to get CC -->
-          <input type="hidden" name="_cc" value="kasayedesu19@gmail.com">
-          <!-- Add this to format response -->
-          <input type="hidden" name="_template" value="table">
-          
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <label for="name-field" class="pb-2">Your Name</label>
-              <input type="text" name="name" id="name-field" class="form-control" required="">
-            </div>
+   <form action="https://formsubmit.co/kasayedesu19@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+  <!-- Security and anti-spam -->
+  <input type="hidden" name="_captcha" value="false">
+  
+  <!-- Email settings -->
+  <input type="hidden" name="_subject" value="New contact from Desu Portfolio!">
+  <input type="hidden" name="_cc" value="kasayedesu19@gmail.com">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_autoresponse" value="Thank you for contacting me! I'll get back to you soon.">
+  
+  
+  <!--<input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html"> -->
+ <!-- <input type="hidden" name="_redirect" value="http://127.0.0.1:5500/thank-you.html"> -->
+  
+  
+  
+  <input type="hidden" name="_next" value="https://your-vercel-url.vercel.app/thank-you.html">
+  <input type="hidden" name="_redirect" value="https://your-vercel-url.vercel.app/thank-you.html">
+  
+  
+  <!-- Form fields -->
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <label for="name-field" class="pb-2">Your Name</label>
+      <input type="text" name="name" id="name-field" class="form-control" required="">
+    </div>
 
-            <div class="col-md-6">
-              <label for="email-field" class="pb-2">Your Email</label>
-              <input type="email" class="form-control" name="email" id="email-field" required="">
-            </div>
+    <div class="col-md-6">
+      <label for="email-field" class="pb-2">Your Email</label>
+      <input type="email" class="form-control" name="email" id="email-field" required="">
+    </div>
 
-            <div class="col-md-12">
-              <label for="subject-field" class="pb-2">Subject</label>
-              <input type="text" class="form-control" name="_subject" id="subject-field" value="Portfolio Contact" required="">
-            </div>
+    <div class="col-md-12">
+      <label for="subject-field" class="pb-2">Subject</label>
+      <input type="text" class="form-control" name="_subject" id="subject-field" value="Portfolio Contact" required="">
+    </div>
 
-            <div class="col-md-12">
-              <label for="message-field" class="pb-2">Message</label>
-              <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-            </div>
+    <div class="col-md-12">
+      <label for="message-field" class="pb-2">Message</label>
+      <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+    </div>
 
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+    <div class="col-md-12 text-center">
+      <div class="loading">Loading</div>
+      <div class="error-message"></div>
+      <div class="sent-message">Your message has been sent. Thank you!</div>
 
-              <button type="submit">Send Message</button>
-            </div>
-          </div>
-        </form>
+      <button type="submit">Send Message</button>
+    </div>
+  </div>
+</form>
       </div><!-- End Contact Form -->
 
     </div>
@@ -596,9 +605,7 @@
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Desu Kasaye</strong> <span>All Rights Reserved</span></p>
       </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      
     </div>
   </footer>
 
@@ -626,3 +633,52 @@
 </body>
 
 </html>
+
+<script>
+// This will catch the form submission and handle it with AJAX
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form[action*="formsubmit"]');
+  
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Show loading
+      document.querySelector('.loading').style.display = 'block';
+      
+      try {
+        const formData = new FormData(this);
+        
+        const response = await fetch('https://formsubmit.co/ajax/kasayedesu19@gmail.com', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        // Hide loading
+        document.querySelector('.loading').style.display = 'none';
+        
+        if (result.success === 'true' || result.success === true) {
+          // Show success message
+          document.querySelector('.sent-message').style.display = 'block';
+          
+          // Clear form
+          this.reset();
+          
+          // Redirect after 2 seconds
+          setTimeout(() => {
+            window.location.href = '/thank-you.html';
+          }, 2000);
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        document.querySelector('.loading').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'block';
+        document.querySelector('.error-message').innerHTML = 'Something went wrong. Please try again.';
+      }
+    });
+  }
+});
+</script>
