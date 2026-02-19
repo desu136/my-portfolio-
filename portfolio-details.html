@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Details - Desu Kasaye Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile.jpg" alt="Desu Kasaye" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Desu Kasaye</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" id="project-title">Project Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current" id="project-crumb">Project Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <!-- Slider will be populated by JavaScript -->
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center" id="slider-wrapper">
+            <!-- Images will be inserted here by JavaScript -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description" id="project-description">
+              <!-- Content will be inserted here by JavaScript -->
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info" id="project-info">
+              <!-- Info will be inserted here by JavaScript -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Desu Kasaye</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Dynamic Portfolio Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get project ID from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('project') || 'ecommerce'; // Default to ecommerce
+      
+      // Project data
+      const projects = {
+        ecommerce: {
+          title: 'E-Commerce Web Application',
+          breadcrumb: 'E-Commerce Project',
+          images: ['ecommerce-1.png', 'ecommerce-2.png', 'ecommerce-3.png'],
+          description: {
+            heading: 'Full-Stack E-Commerce Platform',
+            paragraphs: [
+              'A comprehensive e-commerce web application built with <strong>Laravel</strong> that provides a complete online shopping experience. This project demonstrates my ability to create production-ready web applications with robust backend functionality and intuitive user interfaces.',
+              'The platform features a responsive design that works seamlessly across all devices, secure user authentication, and a powerful admin dashboard for managing products, orders, and customers.'
+            ],
+            features: [
+              '<strong>Product Management:</strong> Add, edit, delete, and categorize products with images and descriptions',
+              '<strong>User Authentication:</strong> Secure registration, login, and profile management with password hashing',
+              '<strong>Shopping Cart:</strong> Add/remove items, update quantities, and persist cart across sessions',
+              '<strong>Order Processing:</strong> Checkout flow with order confirmation and email notifications',
+              '<strong>Admin Dashboard:</strong> Manage inventory, process orders, and view sales analytics',
+              '<strong>Search & Filter:</strong> Advanced product search with category and price filtering'
+            ],
+            techStack: {
+              left: [
+                '<strong>Backend:</strong> Laravel PHP Framework',
+                '<strong>Database:</strong> MySQL with Eloquent ORM',
+                '<strong>Frontend:</strong> Bootstrap 5, JavaScript, AJAX'
+              ],
+              right: [
+                '<strong>Authentication:</strong> Laravel Breeze',
+                '<strong>Payment:</strong> Integration ready (Chapa/PayPal)',
+                '<strong>Security:</strong> CSRF protection, XSS prevention'
+              ]
+            },
+            alert: {
+              type: 'info',
+              message: 'This project was completed as part of my academic coursework, demonstrating practical application of full-stack development concepts.'
+            }
+          },
+          info: {
+            category: 'Full-Stack Web App',
+            technologies: 'Laravel, MySQL, Bootstrap',
+            date: 'February 2024',
+            github: 'desu136/Dlaravel_ecommerce',
+            demo: 'Coming Soon',
+            role: 'Solo Developer'
+          }
+        },
+        exam: {
+          title: 'Holistic Exam Management System',
+          breadcrumb: 'Exam System',
+          images: ['loginpage.png', 'studenthomepage.png', 'startexampage.png', 'takeexampage.png', 'takeexampage2.png', 'submitpopuppage.png', 'studentviewresultpage.png', 'admindashboard.png', 'userdetailpage.png', 'exampage.png', 'detailresultpage.png', 'analysispage.png'],
+          description: {
+            heading: 'Comprehensive Exam Management Platform',
+            paragraphs: [
+              'A robust web-based examination system built with <strong>ASP.NET</strong> that streamlines the entire exam lifecycle - from creation to evaluation. This system serves educational institutions by digitizing the examination process with role-based access control.',
+              'The platform supports three user roles: Administrators,  and Students, each with tailored interfaces and permissions. Teachers can create exams, manage question banks, and grade submissions, while students can take exams and view their results.'
+            ],
+            features: [
+              '<strong>Role-Based Access:</strong> Separate dashboards for Admin, Teachers, and Students',
+              '<strong>Question Bank:</strong> Create and manage questions with multiple types (MCQ, true/false, essay)',
+              '<strong>Exam Creation:</strong> Set duration, total marks, and randomize questions',
+              '<strong>Automated Grading:</strong> Instant results for objective questions',
+              '<strong>Result Analytics:</strong> Generate performance reports and statistics',
+              '<strong>Time Management:</strong> Automatic submission when time expires'
+            ],
+            techStack: {
+              left: [
+                '<strong>Framework:</strong> ASP.NET MVC',
+                '<strong>Language:</strong> C#',
+                '<strong>Database:</strong> SQL Server'
+              ],
+              right: [
+                '<strong>Frontend:</strong> Bootstrap, jQuery',
+                '<strong>Authentication:</strong> ASP.NET Identity',
+                '<strong>ORM:</strong> Entity Framework'
+              ]
+            },
+            alert: {
+              type: 'success',
+              message: 'This project was recognized as one of the top academic projects in the Software Engineering department.'
+            }
+          },
+          info: {
+            category: 'Educational Web App',
+            technologies: 'ASP.NET, C#, SQL Server',
+            date: 'October 2024',
+            github: 'desu136/holist_exam_managent_system',
+            demo: 'Coming Soon',
+            role: 'Full-Stack Developer'
+          }
+        },
+        hospital: {
+          title: 'Hospital Appointment Booking System',
+          breadcrumb: 'Hospital System',
+          images: ['hp1.png', 'hp2.png', 'hp3.png','hp4.png', 'hp5.png', 'hp6.png', 'hp7.png', 'hp8.png', 'ph9.png', 'ph10.png'],
+          description: {
+            heading: 'Modern Healthcare Appointment Platform',
+            paragraphs: [
+              'A full-stack hospital appointment booking system built with the <strong>MERN stack (MongoDB, Express.js, React, Node.js)</strong>. This application revolutionizes how patients schedule medical appointments by providing an intuitive, real-time booking experience.',
+              'The system connects patients with healthcare providers seamlessly, offering features like doctor availability tracking, appointment reminders, and medical history management.'
+            ],
+            features: [
+              '<strong>Doctor Profiles:</strong> Browse doctors by specialty, experience, and availability',
+              '<strong>Real-time Scheduling:</strong> View and book available time slots instantly',
+              '<strong>Patient Dashboard:</strong> Manage appointments, view history, and receive reminders',
+              '<strong>Admin Panel:</strong> Manage doctors, appointments, and system settings',
+              '<strong>Email Notifications:</strong> Automated confirmations and reminders',
+              '<strong>Medical Records:</strong> Secure storage of patient history and prescriptions'
+            ],
+            techStack: {
+              left: [
+                '<strong>Frontend:</strong> React.js, Context API, Bootstrap',
+                '<strong>Backend:</strong> Node.js, Express.js',
+                '<strong>Database:</strong> MongoDB with Mongoose'
+              ],
+              right: [
+                '<strong>Authentication:</strong> JWT, bcrypt',
+                '<strong>State Management:</strong> React Context/Hooks',
+                '<strong>API:</strong> RESTful architecture'
+              ]
+            },
+            alert: {
+              type: 'primary',
+              message: 'This project demonstrates modern JavaScript development with React hooks, context API, and real-time data synchronization.'
+            }
+          },
+          info: {
+            category: 'Healthcare Web App',
+            technologies: 'MERN Stack (MongoDB, Express, React, Node.js)',
+            date: 'January 2025',
+            github: 'desu136/hospital_booking_A',
+            demo: 'Coming Soon',
+            role: 'Full-Stack Developer'
+          }
+        },
+        
+      };
+
+      // Get the project data or default to ecommerce
+      const project = projects[projectId] || projects.ecommerce;
+      
+      // Update page title and breadcrumb
+      document.getElementById('project-title').textContent = project.title;
+      document.getElementById('project-crumb').textContent = project.breadcrumb;
+      
+      // Update slider images
+      const sliderWrapper = document.getElementById('slider-wrapper');
+      sliderWrapper.innerHTML = ''; // Clear existing
+      
+      project.images.forEach(image => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="assets/img/portfolio/${image}" alt="${project.title}">`;
+        sliderWrapper.appendChild(slide);
+      });
+      
+      // Update description
+      const descriptionDiv = document.getElementById('project-description');
+      const techStackLeft = project.description.techStack.left.map(item => `<li>${item}</li>`).join('');
+      const techStackRight = project.description.techStack.right.map(item => `<li>${item}</li>`).join('');
+      
+      descriptionDiv.innerHTML = `
+        <h2>${project.description.heading}</h2>
+        <p>${project.description.paragraphs[0]}</p>
+        <p>${project.description.paragraphs[1]}</p>
+        
+        <h3 class="mt-4">Key Features:</h3>
+        <ul>
+          ${project.description.features.map(feature => `<li><i class="bi bi-check-circle-fill text-success me-2"></i> ${feature}</li>`).join('')}
+        </ul>
+        
+        <h3 class="mt-4">Technologies Used:</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>${techStackLeft}</ul>
+          </div>
+          <div class="col-md-6">
+            <ul>${techStackRight}</ul>
+          </div>
+        </div>
+        
+        <div class="alert alert-${project.description.alert.type} mt-4">
+          <i class="bi bi-info-circle-fill me-2"></i>
+          ${project.description.alert.message}
+        </div>
+      `;
+      
+      // Update info sidebar
+      const infoDiv = document.getElementById('project-info');
+      infoDiv.innerHTML = `
+        <h3>Project Details</h3>
+        <ul>
+          <li><strong>Category</strong> ${project.info.category}</li>
+          <li><strong>Technologies</strong> ${project.info.technologies}</li>
+          <li><strong>Project Date</strong> ${project.info.date}</li>
+          <li><strong>GitHub</strong> <a href="https://github.com/${project.info.github}" target="_blank"><i class="bi bi-github"></i> View Code</a></li>
+          <li><strong>Live Demo</strong> <a href="#"><i class="bi bi-box-arrow-up-right"></i> ${project.info.demo}</a></li>
+          <li><strong>Role</strong> ${project.info.role}</li>
+        </ul>
+      `;
+      
+      // Reinitialize swiper after content update
+      setTimeout(() => {
+        if (window.Swiper) {
+          new Swiper('.init-swiper', {
+            loop: true,
+            speed: 600,
+            autoplay: {
+              delay: 5000
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            }
+          });
+        }
+      }, 100);
+    });
+  </script>
+
+</body>
+
+</html>
