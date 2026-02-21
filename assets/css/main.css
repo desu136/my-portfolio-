@@ -66,6 +66,26 @@ body {
   font-family: var(--default-font);
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  z-index: 1000000;
+}
+
+.skip-link:focus {
+  left: 12px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -591,6 +611,17 @@ section,
   border-bottom: 2px solid var(--accent-color);
 }
 
+.hero .hero-cta .btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+
+.hero .hero-highlights .badge {
+  border-radius: 999px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
 .hero .social-links {
   margin-top: 25px;
 }
@@ -615,6 +646,21 @@ section,
 
   .hero p {
     font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -1272,4 +1318,5 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  padding: 60px 0;
 }

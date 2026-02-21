@@ -30,11 +30,13 @@
 
 <body class="portfolio-details-page">
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <i class="header-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Toggle navigation" aria-controls="navmenu" aria-expanded="false"></i>
 
     <div class="profile-img">
-      <img src="assets/img/my-profile.jpg" alt="Desu Kasaye" class="img-fluid rounded-circle">
+      <img src="assets/img/myimage.jpg" alt="Desu Kasaye" class="img-fluid rounded-circle" loading="lazy">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -42,9 +44,9 @@
     </a>
 
     <div class="social-links text-center">
-     <a href="https://github.com/desu136" class="linkedin"><i class="bi bi-github"></i></a>
-      <a href="https://www.facebook.com/desu.kasaye" class="facebook"><i class="bi bi-facebook"></i></a>
-     <a href="https://www.linkedin.com/in/desu-kasaye-0a200b372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+     <a href="https://github.com/desu136" class="linkedin" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.facebook.com/desu.kasaye" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+     <a href="https://www.linkedin.com/in/desu-kasaye-0a200b372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
 
     </div>
 
@@ -60,7 +62,7 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main" id="main-content" tabindex="-1">
 
     <!-- Page Title -->
     <div class="page-title dark-background">
@@ -136,7 +138,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -314,7 +316,7 @@
       project.images.forEach(image => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
-        slide.innerHTML = `<img src="assets/img/portfolio/${image}" alt="${project.title}">`;
+        slide.innerHTML = `<img src="assets/img/portfolio/${image}" alt="${project.title}" loading="lazy" decoding="async">`;
         sliderWrapper.appendChild(slide);
       });
       

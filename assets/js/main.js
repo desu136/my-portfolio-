@@ -9,17 +9,36 @@
 (function() {
   "use strict";
 
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
+  function isHeaderShown() {
+    return document.querySelector('#header')?.classList.contains('header-show');
+  }
+
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
+    const header = document.querySelector('#header');
+    if (!header || !headerToggleBtn) return;
+
+    header.classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
+    headerToggleBtn.setAttribute('aria-expanded', isHeaderShown() ? 'true' : 'false');
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener('click', headerToggle);
+    headerToggleBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        headerToggle();
+      }
+    });
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -65,13 +84,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -81,7 +102,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: prefersReducedMotion ? 0 : 600,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -93,7 +114,7 @@
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  if (selectTyped && !prefersReducedMotion) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
     new Typed('.typed', {

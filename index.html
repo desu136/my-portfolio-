@@ -31,11 +31,13 @@
 
 <body class="index-page">
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <i class="header-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Toggle navigation" aria-controls="navmenu" aria-expanded="false"></i>
 
     <div class="profile-img">
-      <img src="assets/img/myimage.jpg" alt="Desu Kasaye Profile" class="img-fluid rounded-circle">
+      <img src="assets/img/myimage.jpg" alt="Desu Kasaye Profile" class="img-fluid rounded-circle" loading="lazy">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -43,9 +45,9 @@
     </a>
 
      <div class="social-links text-center">
-     <a href="https://github.com/desu136" class="linkedin"><i class="bi bi-github"></i></a>
-      <a href="https://www.facebook.com/desu.kasaye" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/desu-kasaye-0a200b372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+     <a href="https://github.com/desu136" class="linkedin" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.facebook.com/desu.kasaye" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/desu-kasaye-0a200b372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
 
     </div>
 
@@ -61,15 +63,28 @@
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main" id="main-content" tabindex="-1">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-      <img src="assets/img/heoebackground.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/heoebackground.jpg" alt="Background" data-aos="fade-in" class="" fetchpriority="high">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Desu Kasaye</h2>
         <p>I'm <span class="typed" data-typed-items="Software Engineering Student, Full-Stack Developer, Laravel Developer, MERN Stack Developer, Freelancer">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+
+        <div class="hero-cta d-flex flex-wrap align-items-center gap-2 mt-4">
+          <a class="btn btn-primary" href="assets/Desu_Kasaye_CV.pdf" download>Download CV</a>
+          <a class="btn btn-outline-light" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="hero-highlights d-flex flex-wrap gap-2 mt-4">
+          <span class="badge text-bg-light">Full-Stack</span>
+          <span class="badge text-bg-light">Laravel</span>
+          <span class="badge text-bg-light">ASP.NET</span>
+          <span class="badge text-bg-light">MERN</span>
+          <span class="badge text-bg-light">Open to internships</span>
+        </div>
       </div>
     </section><!-- /Hero Section -->
 
@@ -86,7 +101,7 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/my profile.jpg" class="img-fluid" alt="Desu Kasaye">
+            <img src="assets/img/my profile.jpg" class="img-fluid" alt="Desu Kasaye" loading="lazy">
           </div>
           <div class="col-lg-8 content">
             <h2>Full-Stack Developer & Software Engineering Student</h2>
@@ -384,7 +399,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-laravel">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/ecommerce.png" class="img-fluid" alt="E-Commerce Application">
+                <img src="assets/img/portfolio/ecommerce.png" class="img-fluid" alt="E-Commerce Application" loading="lazy">
                 <div class="portfolio-info">
                   <h4>E-Commerce Web App</h4>
                   <p>Laravel | MySQL | Bootstrap</p>
@@ -396,7 +411,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-asp">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/takeexampage.png" class="img-fluid" alt="Exam Management System">
+                <img src="assets/img/portfolio/takeexampage.png" class="img-fluid" alt="Exam Management System" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Exam Management System</h4>
                   <p>ASP.NET | SQL Server | Bootstrap</p>
@@ -408,7 +423,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mern">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/hospital-booking.png" class="img-fluid" alt="Hospital Booking System">
+                <img src="assets/img/portfolio/hospital-booking.png" class="img-fluid" alt="Hospital Booking System" loading="lazy">
                 <div class="portfolio-info">
                   <h4>Hospital Appointment System</h4>
                   <p>MERN Stack | Tailwind CSS</p>
@@ -609,7 +624,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
